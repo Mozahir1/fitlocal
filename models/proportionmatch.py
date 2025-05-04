@@ -90,10 +90,24 @@ def boosted_score(name: str, new_features: np.ndarray, good_feats: np.ndarray):
 
     # Rating interpretation
     if scaled_score >= 35:
-        print(f"✅ {name} Outfit is well balanced!")
+        print("✅ Good fit")
     else:
-        print(f"⚠️ {name} Outfit balance could improve!")
- 
+        print("❌ Bad fit")
+
+    # Output
+    # print(f"\n🖼 {name}")
+    # print(f"  - torso_leg_ratio: {torso_leg_ratio:.4f}")
+    # print(f"  - arm_symmetry_diff: {arm_sym_diff:.4f}")
+    # print(f"  - leg_symmetry_diff: {leg_sym_diff:.4f}")
+    # print(f"  - vis_leg_torso_ratio: {vis_leg_torso_ratio:.4f}")
+    # print(f"  - sleeve_sym: {sleeve_sym:.4f}")
+    # print(f"  - hem_sym: {hem_sym:.4f}")
+    # print(f"📈 Base Score (adjusted distance): {base_score:.2f}%")
+    # print(f"✨ Boosts Applied: +{boost}%")
+    # print(f"🚩 Penalties Applied: -{penalty}%")
+    # print(f"✅ Final Boosted Proportion Match Score: {scaled_score} / 70")
+    # print(f"🎯 Fit Rating: {rating}")
+
 # --- Main CLI ---
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Boosted proportion match scorer")
